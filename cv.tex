@@ -1,132 +1,125 @@
 %!TEX TS-program = xelatex
-\documentclass[]{friggeri-cv}
-\addbibresource{bibliography.bib}
+\documentclass[print]{friggeri-cv}
+
+% Compress itemize
+\newenvironment{itemize*}%
+  {\begin{itemize}%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}%
+  {\end{itemize}}
+  
+\def\Cplusplus{{\rm C\raise.5ex\hbox{\small ++}}}
 
 \begin{document}
-\header{adrien}{friggeri}
-       {social network analyst}
+\header{Christopher Li}
+       {}
 
 
 % In the aside, each new line forces a line break
 \begin{aside}
-  \section{about}
-    31 rue Smith
-    69002 Lyon
-    France
-    ~
-    \href{mailto:adrien@friggeri.net}{adrien@friggeri.net}
-    \href{http://friggeri.net}{http://friggeri.net}
-    \href{http://facebook.com/adrien}{fb://adrien}
-  \section{languages}
-    bilingual french/english
-    spanish \& italian notions
-  \section{programming}
-    {\color{red} $\varheartsuit$} JavaScript
-    (ES5, node.js)
-    Python, C, OCaml
-    CSS3 \& HTML5
+  \section{Contact}
+    \href{mailto:licy@usc.edu}{licy@usc.edu}
+    \href{http://chris.topher.li}{http://chris.topher.li}
+  \section{Languages}
+    C/\Cplusplus/Objective-C
+    Python
+    Ruby
+    JavaScript
+    {\sc Matlab}
+    Verilog
+    SQL
+  \section{Tools}
+    *nix Administration
+    Adobe Illustrator
+    Subversion
+    Git
+    Bash
 \end{aside}
 
-\section{interests}
+\section{Education}
 
-complex networks, social networks, community detection, community structure,
-overlapping communities, information diffusion, viral marketing, social
-inference, recommendation, data mining
+\education
+  {University of Southern California}
+  {Los Angeles}
+  {may 2013}
+  {
+  B.S. Electrical Engineering (hardware software emphasis) \Space GPA: 3.7
+  }
 
-\section{education}
-
+\vspace{-1.0em}
 \begin{entrylist}
-  \entry
-    {since 2009}
-    {Ph.D. {\normalfont candidate in Computer Science}}
-    {DNET/INRIA, LIP/ÉNS de Lyon}
-    {\emph{A Quantified Theory of Social Cohesion.}}
-  \entry
-    {2007–2008}
-    {M.Sc. magna cum laude}
-    {IXXI, École Normale Supérieure de Lyon}
-    {Majoring in Computer Science\\
-    Specialization in Complex Systems}
-  \entry
-    {2006–2007}
-    {B.Sc. magna cum laude}
-    {École Normale Supérieure de Lyon}
-    {Majoring in Computer Science}
-  \entry
-    {2003–2006}
-    {Classes Préparatoires aux Grandes Écoles}
-    {Lycée Fénelon, Lycée Louis le Grand, Paris}
-    {Preparation for national competitive entrance exams to leading French ``grandes écoles'', specializing in mathematics and physics.}
-  \entry
-    {2003}
-    {French Baccalauréat S. with honors}
-    {Lycée Louis le Grand, Paris}
-    {Specialization in mathematics and physics}
+  \project
+    {Courses}
+    {Data Structures\Space Operating Systems\Space User Interface Design\Space Embedded Systems Design Lab}
+  
+  \project{Honors}
+  {
+    USC Presidential Scholarship 2009--present
+  
+    Viterbi School of Engineering Dean's List 2009--present
+  
+    W.V.T. Rusch Engineering Honors Program 2009--present
+  }
+  
+  \project{Societies}
+  {
+    Eta Kappa Nu (HKN), Tau Beta Pi, IEEE
+  }
+  
 \end{entrylist}
 
-\section{experience}
+\section{Work Experience}
+
+\workexperience
+  {OTA/Antenna Design Intern}
+  {Apple}
+  {summer 2012}
+  {
+  Used Python to make a distributed, fault-tolerant framework for automating RF test equipment. Worked with overseas equipment vendor to develop their automation interface. Wrote data visualizer and helped centralize test data.
+  \begin{itemize*}
+    \item Increased autonomous running time by up to 80x.
+  \end{itemize*}
+  }
+\workexperience
+  {Paid Research}
+  {USC iLab}
+  {2011--present}
+  {
+  Granted Provost Fellowship to create a GUI for the Neuromorphic Robotics Toolkit for the USC iLab. Designed and manufactured components for an autonomous land vehicle. Wrote microprocessor software for control.
+  \begin{itemize*}
+    \item Increased running time by adding automatic low-battery shutoff.
+  \end{itemize*}
+  }
+\workexperience
+  {Paid Research}
+  {USC Aerial Robotics}
+  {2009--present}
+  {
+  Granted Rose Hills Fellowship to write navigation software with ROS in \Cplusplus\ and Python for an autonomous quadrotor helicopter. Responsible for low-level control with an Arduino and serial communication. Electrical Team Lead since Fall 2012.
+  \begin{itemize*}
+    \item Increased organization by leading a migration to git for versioning.
+    \item Reduced quadrotor weight by 5\% with a new power distribution board.
+    \item Placed 5th of 13 teams at the AUVSI International Aerial Robotics Competition.
+  \end{itemize*}
+  }
+
+\section{Personal Projects}
 
 \begin{entrylist}
-  \entry
-    {02–07 2009}
-    {LIP6/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Visualization of complex networks.}}
-  \entry
-    {06–08 2008}
-    {ISCPIF/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Diffusion in the Blogosphere. Happy Flu.}}
-  \entry
-    {06–08 2007}
-    {LIP6/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Kernels in real world networks.}}
-  \entry
-    {07–08 2005}
-    {\href{http://www.kelkoo.com}{Kelkoo.com}}
-    {Summer job.}
-    {\emph{Creation of a keyword generator for Google Adwords.}}
-  \entry
-    {07–08 2004}
-    {\href{http://www.monsieurprix.com}{MonsieurPrix.com}}
-    {Summer job.}
-    {\emph{Development of an e-commerce product indexation spider.}}
+  \project
+    {Nimbus}
+    {File system for CloudApp, written using FUSE. Successfully funded through Kickstarter.}
+  \project
+    {Maxel}
+    {A multi-threaded download accelerator written using Cocoa and libcurl.}
+  \project
+    {Trollicons}
+    {Rage icons for the most popular IM clients. A custom rake script makes deployment and generation of packages quick and easy. Over 20,000 downloads.}
+  \project
+    {SevenServers}
+    {Web-based, social S/FTP client. Written in Ruby on Rails.}
 \end{entrylist}
 
-\section{applications}
-
-\begin{entrylist}
-  \entry
-    {2012}
-    {Who did I forget ?}
-    {\href{http://whodidiforget.com}{whodidiforget.com}}
-    {Guest list recommendation for Facebook events based on friends already attending the event.}
-  \entry
-    {2011}
-    {Fellows}
-    {\href{http://fellows-exp.com}{fellows-exp.com}}
-    {Automatic community detection among Facebook Friends in order to validate the \emph{cohesion} measure, creation of friend lists.}
-  \entry
-    {2008}
-    {Happy Flu}
-    {\href{http://happyflu.com}{happyflu.com}}
-    {Experiment aimed to measure viral spreading of content across the blogosphere.}
-\end{entrylist}
-
-\section{publications}
-
-
-\printbibsection{article}{article in peer-reviewed journal}
-\begin{refsection}
-  \nocite{*}
-  \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
-\end{refsection}
-\begin{refsection}
-  \nocite{*}
-  \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
-\end{refsection}
-\printbibsection{misc}{other publications}
-\printbibsection{report}{research reports}
+\nopagebreak
 
 \end{document}
