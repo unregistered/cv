@@ -156,7 +156,7 @@
     {\large {#1}, {#2}}%
     \hfill%
     {\textit{#3}}\\%
-    #4\vspace{1.5em}%
+    #4\vspace{\parsep}%
   }\\}
 
 % two column deal
