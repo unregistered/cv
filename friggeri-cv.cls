@@ -118,7 +118,7 @@
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{\parskip}
+  % \par\vspace{\parskip}
 }
 
 \renewcommand{\subsection}[2]{
@@ -134,7 +134,7 @@
 % List environment %
 %%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\cvParBoxSize}{11.8cm}
+\newcommand{\cvParBoxSize}{11.4cm}
 
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
@@ -194,5 +194,5 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=0cm,nohead,nofoot]{geometry}
+\RequirePackage[left=6.1cm,top=2cm,right=2cm,bottom=0cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
