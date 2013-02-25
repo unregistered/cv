@@ -153,7 +153,7 @@
 
 \newcommand{\workexperience}[4]{%
   \parbox[t]{\textwidth}{%
-    {\large {#1}, {#2}}%
+    {\large \textbf{#2}\Space {#1}}%
     \hfill%
     {\textit{#3}}\\%
     #4\vspace{\parsep}%
@@ -165,7 +165,6 @@
     #2\vspace{\parsep}%
   }\\}
   
-
 %%%%%%%%%%%%%%
 % Side block %
 %%%%%%%%%%%%%%
