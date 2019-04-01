@@ -51,7 +51,7 @@
 %%%%%%%%%
 
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{unicode-math}
 
 \newfontfamily\bodyfont[]{Cabin} % Last name
 \newfontfamily\thinfont[]{Cabin} % First name
@@ -151,12 +151,15 @@
     #4\vspace{\parsep}%
   }\\}
 
-\newcommand{\workexperience}[4]{%
+\newcommand{\workexperience}[5]{%
   \parbox[t]{\textwidth}{%
-    {\large \textbf{#2}\Space {#1}}%
+    {\large \textbf{#1}\Space {#3}, {#2}}%
     \hfill%
-    {\textit{#3}}\\%
-    #4\vspace{\parsep}%
+    {\textit{#4}}\\%
+    % \\
+    % \textit{#4}
+    % \\
+    #5\vspace{\parsep}%
   }\\}
 
 % two column deal
